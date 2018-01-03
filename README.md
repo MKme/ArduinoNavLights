@@ -1,9 +1,10 @@
 # ArduinoNavLights
 Arduino beacon and navigation lights for Radio Control models
 
- Erics DIY Aircraft Navigation Lights Project
+ Erics DIY Aircraft LED Navigation Lights Project
  
 My Youtube Channel  : http://www.youtube.com/mkmeorg
+
 Website http://mkme.org
 
 
