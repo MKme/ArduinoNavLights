@@ -4,11 +4,10 @@ Arduino beacon and navigation lights for Radio Control models
  Erics DIY Aircraft LED Navigation Lights Project
  
 My Youtube Channel  : http://www.youtube.com/mkmeorg
-
 Website http://mkme.org
 
 
-V1 Set up basic lighting
+V1 Code Set up basic lighting
 Changed Pins to support nano
 Fixed flash sequence
  
@@ -21,3 +20,7 @@ Fixed flash sequence
 
 Custom PCB now added which will use the ATTiny85 and a few discreet components to run the strobes on a very small PCB.
 Gerber files can be uploaded to places like JLCPCB and for $20 you can have 10 boards.
+
+<p align="center">
+  <img src="https://github.com/MKme/ArduinoNavLights/blob/master/Photos%20and%20Ref%20Materials/Board.PNG" width="650"/>
+</p>
