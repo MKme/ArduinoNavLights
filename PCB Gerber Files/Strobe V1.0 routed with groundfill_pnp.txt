@@ -1,0 +1,95 @@
+*Pick And Place List
+*Company=
+*Author=
+*eMail=
+*
+*Project=Strobe V1.0 routed with groundfill
+*Date=19:05:10
+*CreatedBy=Fritzing 0.9.3b.04.19.5c895d327c44a3114e5fcc9d8260daf0cbb52806
+*
+*
+*Coordinates in mm, always center of component
+*Origin 0/0=Lower left corner of PCB
+*Rotation in degree (0-360, math. pos.)
+*
+*No;Value;Package;X;Y;Rotation;Side;Name
+1;;dip;10.1682;-28.4013;0;Bottom;U1
+2;;;1.4986;-4.4007;0;Bottom;Copper Fill31
+3;;;15.7734;-17.5452;0;Bottom;Copper Fill1
+4;;;13.8181;-13.2332;0;Bottom;Via1
+5;;;24.8127;-3.07881;0;Bottom;TXT4
+6;;;16.8914;-21.0506;0;Bottom;Via6
+7;4.7k;0805 [SMD];13.9855;-15.2462;180;Top;R3
+8;;;27.8638;-7.3471;0;Bottom;Copper Fill35
+9;;;29.4271;-18.1322;-90;Bottom;TXT12
+10;;;2.2352;-25.8383;0;Bottom;Copper Fill11
+11;;;21.6408;-25.5208;0;Bottom;Copper Fill20
+12;;;21.1836;-18.3199;0;Bottom;Copper Fill14
+13;;TO92 [THT];11.1501;-11.1866;180;Bottom;Q1
+14;;;18.8611;-21.9979;0;Bottom;Via8
+15;;;0.929729;-28.301;0;Bottom;TXT8
+16;;;18.5166;-12.0207;0;Bottom;Copper Fill16
+17;;tactile-pth;19.1988;-29.092;90;Bottom;S1
+18;;;18.0213;-12.516;0;Bottom;Copper Fill15
+19;;screwterminal-3.5mm-3_lock.007s;26.8789;-15.6509;90;Bottom;WING
+20;;TO92 [THT];18.4557;-8.9166;180;Bottom;Q2
+21;;;10.0793;-17.5295;-90;Bottom;TXT11
+22;;;3.3782;-10.6491;0;Bottom;Copper Fill32
+23;;;16.4084;-14.5734;0;Bottom;Copper Fill27
+24;;;25.2476;-23.7858;0;Bottom;TXT3
+25;;;19.0754;-16.5292;0;Bottom;Copper Fill25
+26;;;18.0213;-11.5508;0;Bottom;Copper Fill36
+27;;;22.3531;-22.4257;0;Bottom;Via4
+28;;;6.3754;-16.3514;0;Bottom;Copper Fill21
+29;;;3.3782;-10.6491;0;Bottom;Copper Fill2
+30;;;20.1676;-14.2178;0;Bottom;Copper Fill26
+31;47µF;100 mil [THT, electrolytic];4.2726;-11.8797;-90;Bottom;C2
+32;;;15.6972;-1.6194;0;Bottom;Copper Fill29
+33;2.2k;0805 [SMD];11.6068;-17.824;180;Top;R6
+34;;;24.4031;-13.4716;0;Bottom;Via3
+35;10k;0805 [SMD];18.9522;-17.8058;0;Top;R8
+36;;;25.9588;-7.3471;0;Bottom;Copper Fill8
+37;;;9.6774;-15.1322;0;Bottom;Copper Fill23
+38;;;21.1582;-20.3519;0;Bottom;Copper Fill33
+39;;;25.0727;-31.409;0;Bottom;TXT1
+40;;;7.1628;-24.6191;0;Bottom;Copper Fill12
+41;;;0.97437;-25.3547;0;Bottom;TXT9
+42;;;6.3373;-23.7936;0;Bottom;Copper Fill37
+43;;;17.2212;-5.3151;0;Bottom;Copper Fill3
+44;;screwterminal-3.5mm-2_lock;4.43011;-18.527;-90;Bottom;BCN
+45;;;26.9113;-8.2996;0;Bottom;Copper Fill7
+46;;;15.7734;-17.5452;0;Bottom;Copper Fill28
+47;;THT;3.1907;-27.055;180;Bottom;AUX
+48;100;0805 [SMD];19.6729;-20.3271;0;Top;R2
+49;;;20.7645;-8.0456;0;Bottom;Copper Fill5
+50;5V;DPak [SMD];7.15336;-4.34144;-90;Top;7805
+51;100;0805 [SMD];11.3775;-20.2626;0;Top;R7
+52;;;27.8638;-7.3471;0;Bottom;Copper Fill9
+53;;;16.6116;-22.8284;0;Bottom;Copper Fill19
+54;;screwterminal-3.5mm-3_lock.007s;26.9664;-27.8947;90;Bottom;WING
+55;;screwterminal-3.5mm-2_lock;26.8703;-5.34344;90;Bottom;BATT
+56;;;4.8133;-1.1622;0;Bottom;Copper Fill30
+57;100;0805 [SMD];21.0755;-12.7766;180;Top;R9
+58;;;25.1633;-11.7136;0;Bottom;TXT3
+59;;;2.76001;-20.6674;0;Bottom;TXT10
+60;;;26.9113;-8.2996;0;Bottom;Copper Fill34
+61;;;25.1699;-15.5783;0;Bottom;TXT6
+62;;;21.6789;-18.8406;0;Bottom;Copper Fill13
+63;100;0805 [SMD];18.93;-15.2779;0;Top;R2
+64;;;13.3604;-15.1068;0;Bottom;Copper Fill24
+65;;;7.1628;-24.6191;0;Bottom;Copper Fill38
+66;100;0805 [SMD];19.0768;-23.8065;0;Top;R1
+67;;;18.0788;-11.9811;0;Bottom;Via5
+68;;;25.0359;-19.105;0;Bottom;TXT7
+69;;;21.59;-8.8711;0;Bottom;Copper Fill6
+70;;;2.3368;-30.7024;0;Bottom;Copper Fill17
+71;;;3.1369;-24.962;0;Bottom;Copper Fill10
+72;;;24.902;-7.00723;0;Bottom;TXT5
+73;;;16.0479;-16.9499;0;Bottom;Via7
+74;;;18.6944;-19.4502;0;Bottom;Copper Fill22
+75;;;18.923;-5.3151;0;Bottom;Copper Fill4
+76;;;25.3086;-27.5113;0;Bottom;TXT2
+77;;;7.8486;-25.6478;0;Bottom;Copper Fill18
+78;47µF;100 mil [THT, electrolytic];18.1348;-3.9785;90;Bottom;C1
+79;;;21.7364;-18.2929;0;Bottom;Via9
+80;;;15.4344;-13.0632;0;Bottom;Via2
