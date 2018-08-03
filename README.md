@@ -1,5 +1,6 @@
 # ArduinoNavLights
-Arduino beacon and navigation lights for Radio Control models
+Arduino beacon and navigation lights for Radio Control models & drones to make the skies safer. By using stard colors you can also 
+ensure a pilot will recognize your model as a piloted vehicle/model.
 
  Erics DIY Aircraft LED Navigation Lights Project
  
@@ -17,6 +18,8 @@ Fixed flash sequence
  * Double flash strobe
 
 ### PCB Files and Circuit Diagram
+
+## WARNING THIS PCB IS NOT YET TESTED FOR ACCURACY!
 
 Custom PCB now added which will use the ATTiny85 and a few discreet components to run the strobes on a very small PCB.
 Gerber files can be uploaded to places like JLCPCB and for $20 you can have 10 boards.
