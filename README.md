@@ -3,7 +3,8 @@ Arduino beacon and navigation lights for Radio Control models & drones to make t
 ensure a pilot will recognize your model as a piloted vehicle/model.
 
  Erics DIY Aircraft LED Navigation Lights Project
- 
+
+Full YouTube video of the LED's in action: https://www.youtube.com/watch?v=f-w4a3QijBU 
 My Youtube Channel  : http://www.youtube.com/mkmeorg
 Website http://mkme.org
 
