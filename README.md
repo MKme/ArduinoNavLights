@@ -17,3 +17,7 @@ Fixed flash sequence
  * 2 fading anti-collision beacons
  * Double flash strobe
 
+### PCB Files and Circuit Diagram
+
+Custom PCB now added which will use the ATTiny85 and a few discreet components to run the strobes on a very small PCB.
+Gerber files can be uploaded to places like JLCPCB and for $20 you can have 10 boards.
