@@ -19,7 +19,7 @@ Adapted from :
  * 
 
  Update for Disgispark
- Ref Materialhttps://digistump.com/board/index.php?topic=142.0
+ Ref Material on pins https://digistump.com/board/index.php?topic=142.0
  
 
 */
