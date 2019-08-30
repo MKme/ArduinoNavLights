@@ -17,9 +17,17 @@ Adapted from :
  * @version 0.3
  * @date 2014-06-12
  * 
-
- Update for Disgispark
+_________________--------______________--------------________________----------------__________
+ Update for Disgispark -  ERICS NOTEZ
+ 
  Ref Material on pins https://digistump.com/board/index.php?topic=142.0
+ Install board manager in preferences in IDE: https://raw.githubusercontent.com/digistump/arduino-boards-index/master/package_digistump_index.json
+ Install drivers package: https://github.com/digistump/DigistumpArduino/releases
+ Change programmer in IDE to "USBTinyISP"
+ Hit program (dont plug in board untill te text asks you to in IDE dialog box
+ Profit...
+Works Aug 2019 on clone ebay digispark boards
+ 
  
 
 */
