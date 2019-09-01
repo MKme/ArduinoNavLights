@@ -41,12 +41,12 @@ Works Aug 2019 on clone ebay digispark boards
 #define LL_SERVO_REVERSED true   // Whether or not the servo channel is reversed
 
 // Strobe settings
-#define STB_PIN_LIGHT 0 // Pin number for strobe light output   // ------------------------------------------------------------------------Eric Note WORKS!
+#define STB_PIN_LIGHT 4 // Pin number for strobe light output   // ------------------------------------------------------------------------Eric Note WORKS!
 #define STB_PIN_LIGHTB 8 // Pin number for strobe light output
 #define STB_BLINK_INTERVAL 2000000 // Blink interval for strobe light in microseconds
 
 // Anti-collision beacon settings
-#define ACB1_PIN_LIGHT 1 // Pin number for anti-collision beacon 1  //------------------------------------------------------------ Eric Note on Digispark this is internal LED 
+#define ACB1_PIN_LIGHT 3 // Pin number for anti-collision beacon 1  //------------------------------------------------------------ Eric Note on Digispark 1 is internal LED 
 #define ACB2_PIN_LIGHT 6 // Pin number for anti-collision beacon 2
 #define ACB_FADE_MIN 0 // Minimum fade level for beacon (0-255)
 #define ACB_FADE_MAX 255 // Maximum fade level for beacon (0-255)
