@@ -3,7 +3,20 @@
 My Youtube Channel  : http://www.youtube.com/mkmeorg
 Website http://mkme.org
 
+V1 Set up basic lighting
+Changed Pins to support nano
+Fixed flash sequence
+ 
+ * Features:
+ * Landing light controlled via an RC channel (can use a Y-harness on flaps or landing gear channel)
+ * 2 fading anti-collision beacons
+ * Double flash strobe
 
+Adapted from : 
+ * @author Harold Asbridge
+ * @version 0.3
+ * @date 2014-06-12
+ * 
 _________________--------______________--------------________________----------------__________
  Update for Disgispark -  ERICS NOTEZ
  
@@ -14,9 +27,7 @@ _________________--------______________--------------________________-----------
  Hit program (dont plug in board untill te text asks you to in IDE dialog box
  Profit...
 Works Aug 2019 on clone ebay digispark boards
-
-  * March 2020 Stripped ou servo code and fixed pin assignments/notes.  Working on Nano talon
- * 
+ 
  
 
 */
@@ -30,18 +41,22 @@ Works Aug 2019 on clone ebay digispark boards
 #define LL_SERVO_REVERSED true   // Whether or not the servo channel is reversed
 
 // Strobe settings
-#define STB_PIN_LIGHT 4 // Pin number for strobe light output   // ------------------------------------------------------------------------Eric Note WORKS and labelled Pin P4 on digispark!
+#define STB_PIN_LIGHT 4 // Pin number for strobe light output   // ------------------------------------------------------------------------Eric Note WORKS!
 #define STB_PIN_LIGHTB 8 // Pin number for strobe light output
 #define STB_BLINK_INTERVAL 2000000 // Blink interval for strobe light in microseconds
 
 // Anti-collision beacon settings
-#define ACB1_PIN_LIGHT 1 // Pin number for anti-collision beacon 1  //--------------------------------------------------- Eric Note on Digispark 1 is internal LED but labelled P2!!!! 
+#define ACB1_PIN_LIGHT 3 // Pin number for anti-collision beacon 1  //------------------------------------------------------------ Eric Note on Digispark 1 is internal LED 
 #define ACB2_PIN_LIGHT 6 // Pin number for anti-collision beacon 2
 #define ACB_FADE_MIN 0 // Minimum fade level for beacon (0-255)
 #define ACB_FADE_MAX 255 // Maximum fade level for beacon (0-255)
-#define ACB_FADE_INTERVAL 5000 // Fade step interval, in microseconds (lower numbers = faster fade)
+#define ACB_FADE_INTERVAL 4000 // Fade step interval, in microseconds (lower numbers = faster fade)
 
 
+// Var declarations
+volatile unsigned long servoPulseStartTime;
+volatile int servoPulseWidth = 0;
+boolean curLandingLight = false;
 
 unsigned long lastFadeTime = 0;
 unsigned long lastStrobeTime = 0;
@@ -51,7 +66,8 @@ int fadeDirection = 1;
 // Called on power on or reset
 void setup()
 {
-
+  // Set up interrupt handler
+  attachInterrupt(LL_IRQ_NUMBER, measureServoSignal, CHANGE);
 
   // Declare output pins
   pinMode(LL_PIN_LIGHT, OUTPUT);
@@ -67,7 +83,10 @@ void setup()
 void loop()
 {
   unsigned long currentTime = micros();
+ 
 
+  // Check if the landing light should be turned on
+  checkLandingLight();
   
   // Check if it's time to fade the anti-collision lights
   if ((currentTime - lastFadeTime) > ACB_FADE_INTERVAL) {
@@ -82,9 +101,39 @@ void loop()
   }
 }
 
+// Check servo signal, and decide to turn on/off the landing light
+void checkLandingLight()
+{
+  // Modify threshold to prevent flicker
+  int threshold = LL_SERVO_THRESHOLD;
+  if (!curLandingLight) {
+    // Light is not on, adjust threshold up
+    threshold += LL_SERVO_DEAD_ZONE;
+  } else {
+    // Light is on, adjust threshold down
+    threshold -= LL_SERVO_DEAD_ZONE;
+  }
 
+  // Check servo position
+  if (servoPulseWidth >= threshold) {
+    setLandingLight(true);
+  } else {
+    setLandingLight(false);
+  }
+}
 
-
+// Turn on or off landing light
+void setLandingLight(boolean state)
+{
+  float i;
+  if (state && !curLandingLight) {
+    digitalWrite(LL_PIN_LIGHT, HIGH);
+   
+  } else if (!state && curLandingLight) {
+    digitalWrite(LL_PIN_LIGHT, LOW);
+  }
+  curLandingLight = state;
+}
 
 // Fade anti-collision LEDs
 void doFade()
@@ -120,4 +169,22 @@ void doStrobe()
   delay(50);
   digitalWrite(STB_PIN_LIGHT, LOW);
   digitalWrite(STB_PIN_LIGHTB, LOW);
+}
+
+// Measure servo PWM signal
+void measureServoSignal()
+{
+  int pinState = digitalRead(LL_PIN_SERVO);
+  if(pinState == HIGH) { 
+    // Beginning of PWM pulse, mark time
+    servoPulseStartTime = micros();
+  } else {
+    // End of PWM pulse, calculate pulse duration in mcs
+    servoPulseWidth = (int)(micros() - servoPulseStartTime);
+
+    // If servo channel is reversed, use the inverse
+    if (LL_SERVO_REVERSED) {
+      servoPulseWidth = (1000 - (servoPulseWidth - 1000)) + 1000;
+    }
+  }
 }
